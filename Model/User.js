@@ -8,15 +8,14 @@ mongoose
 
 // creating user schema
 const userSchema = new mongoose.Schema({
-  fullname: {
+  name: {
     type: String,
     required: true,
   },
-  username: {
+  message: {
     type: String,
-    required: true,
   },
-  password: {
+  contact: {
     type: String,
     required: true,
   },
@@ -31,6 +30,6 @@ const userSchema = new mongoose.Schema({
 });
 
 // create a userData named collection
-const userData = mongoose.model("userData", userSchema);
+const userData = mongoose.model("user", userSchema);
 
 module.exports = userData;

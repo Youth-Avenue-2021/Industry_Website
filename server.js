@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const user = require("./Api/User");
-const auth = require("./Api/Auth");
 require("dotenv");
 const PORT = 3000 || process.env.PORT;
 
@@ -9,7 +8,6 @@ const PORT = 3000 || process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/user", user);
-app.use("/api/user", auth);
 
 app.get("/", (req, res) => {
   console.log(req.path);
