@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ContactSection from "./Sections/ContactSection";
-import IntroSection from "./Sections/IntroSection";
+import IntroSection from "./Sections/SliderSection/IntroSection";
 
 function App() {
   return (
