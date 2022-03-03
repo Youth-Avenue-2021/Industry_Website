@@ -2,10 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @layer base {
   @font-face {
     font-family: body;
     src: url("./Fonts/googleFont.woff2");
   }
+}
+
+.inputStyles {
+  @apply w-full p-3 my-2 duration-200 border-2 outline-none bg-gray-50 border-gray-50 focus:border-yellow-700/70;
+}
+
+body {
+  font-family: "Inter";
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100% !important;
+  overflow: hidden;
 }
