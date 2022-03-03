@@ -9,6 +9,10 @@
     font-family: body;
     src: url("./Fonts/googleFont.woff2");
   }
+  @font-face {
+    font-family: bodyText;
+    src: url("./Fonts/fontNormal.woff2");
+  }
 }
 
 .inputStyles {
@@ -22,6 +26,11 @@ body {
 
 .block-boxShadow {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.img-BoxShadow {
+  /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 
 .slider {
