@@ -9,6 +9,7 @@ import image2 from "../Assets/2.jpg";
 import image3 from "../Assets/3.jpg";
 import image4 from "../Assets/4.jpg";
 import image5 from "../Assets/5.jpg";
+import { Link } from "react-router-dom";
 
 const IntroSection = () => {
   const content = [
@@ -27,9 +28,9 @@ const IntroSection = () => {
               <div className="flex flex-col items-center justify-center center">
                 <h1 className="font-medium text-7xl text-gray-50">{item.title}</h1>
                 <p className="mt-5 text-xl font-normal text-yellow-400">{item.description}</p>
-                <a href="#" className="w-32 p-3 my-10 text-center text-white duration-200 bg-gray-900">
+                <Link to="/contact" className="w-32 p-3 my-10 text-center text-white duration-200 bg-gray-900">
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
           ))}
