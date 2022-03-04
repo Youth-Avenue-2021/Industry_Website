@@ -65,3 +65,29 @@ p {
   height: 100% !important;
   overflow: hidden;
 }
+
+.footer-link {
+  position: relative;
+}
+.footer-link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  display: block;
+  margin-top: 2px;
+  right: 0;
+  background: #fff;
+  transition: width 0.4s ease;
+  -webkit-transition: width 0.4s ease;
+}
+
+.footer-link:hover:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+
+.footer-link::after {
+  @apply !bg-yellowColor;
+}

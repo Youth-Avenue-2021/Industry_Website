@@ -1,5 +1,6 @@
 import React from "react";
 import AboutCompany from "../AboutCompany/AboutCompany";
+import Footer from "../FooterSection/Footer";
 import SubscribeSection from "../SubscribeSection/SubscribeSection";
 import WhatWeDoing from "../WhatWeDoingSection/WhatWeDoing";
 import MultipleBlocks from "./Components/MultipleBlocks";
@@ -13,6 +14,7 @@ const IntroSection = () => {
       <WhatWeDoing />
       <AboutCompany />
       <SubscribeSection />
+      <Footer />
     </>
   );
 };
