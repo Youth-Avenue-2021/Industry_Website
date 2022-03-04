@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Inter", "sans-serif"],
+        bodyText: ["bodyText"],
+        headingFont: ["headingFont"],
         // poppins: ["body, sans-serif"],
       },
       colors: {

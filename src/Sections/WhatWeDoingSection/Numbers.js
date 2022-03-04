@@ -22,10 +22,10 @@ const Numbers = () => {
   ];
   return (
     <>
-      <div className="flex flex-row justify-center items-end bg-factoryImg h-[30rem] bg-no-repeat bg-cover bg-center w-full bg-red-200">
-        <div className="container flex flex-row items-center justify-center pb-12 mx-auto">
-          {numberData.map((item) => (
-            <NumbersCounter number={item.number} desc={item.desc} />
+      <div className="flex flex-row justify-center items-end bg-fixed bg-factoryImg h-[38rem] md:h-[30rem] bg-no-repeat bg-cover bg-center w-full bg-red-200">
+        <div className="flex flex-row flex-wrap items-start justify-center w-11/12 pb-12 mx-auto md:w-full md:container md:flex-nowrap">
+          {numberData.map((item, index) => (
+            <NumbersCounter key={index} number={item.number} desc={item.desc} />
           ))}
         </div>
       </div>
