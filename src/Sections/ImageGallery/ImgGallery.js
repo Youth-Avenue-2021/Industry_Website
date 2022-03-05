@@ -13,7 +13,7 @@ const ImgGallery = () => {
     <>
       <div className="mx-auto pb-20 min-h-[20rem] container">
         <SectionHeading heading={"Products Gallery"} />
-        <div className="md:w-10/12 mx-auto products">
+        <div className="md:w-8/12 mx-auto products">
           <Gallery photos={photos} direction={"column"} />
         </div>
       </div>

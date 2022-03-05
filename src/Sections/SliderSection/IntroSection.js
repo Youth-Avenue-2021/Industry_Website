@@ -14,15 +14,15 @@ const IntroSection = () => {
   });
   return (
     <>
-      <AnimatePresence exitBeforeEnter={true}>
-        <GetInTouchPopup />
-        <SliderIntro />
-        <MultipleBlocks />
-        <WhatWeDoing />
-        <AboutCompany />
-        <SubscribeSection />
-        <Footer />
-      </AnimatePresence>
+      {/* <AnimatePresence exitBeforeEnter={true}> */}
+      <GetInTouchPopup />
+      <SliderIntro />
+      <MultipleBlocks />
+      <WhatWeDoing />
+      <AboutCompany />
+      <SubscribeSection />
+      <Footer />
+      {/* </AnimatePresence> */}
     </>
   );
 };

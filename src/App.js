@@ -4,6 +4,7 @@ import ContactSection from "./Sections/ContactSection";
 import IntroSection from "./Sections/SliderSection/IntroSection";
 import { AnimatePresence } from "framer-motion";
 import ImgGallery from "./Sections/ImageGallery/ImgGallery";
+import Navbar from "./Components/Navigation/Navbar";
 
 function App() {
   const location = useLocation();
@@ -13,6 +14,7 @@ function App() {
     //   <p className="text-2xl text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quos officia culpa ut sed blanditiis dolores et, aspernatur eos veniam reiciendis accusantium ab non dolore. Alias, perferendis obcaecati. Distinctio, ipsa.</p>
     // </div>
     <>
+      <Navbar />
       <AnimatePresence exitBeforeEnter={true}>
         <Routes key={location.key} location={location}>
           <Route path="/" exact element={<IntroSection />} />

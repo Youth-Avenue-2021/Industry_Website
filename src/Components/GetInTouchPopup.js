@@ -12,7 +12,7 @@ const GetInTouchPopup = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      //   setShowPopUp(true);
+      setShowPopUp(true);
     }, 15000);
   }, []);
 

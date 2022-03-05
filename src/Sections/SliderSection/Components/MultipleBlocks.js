@@ -19,7 +19,7 @@ const MultipleBlocks = () => {
   return (
     <div className="container flex flex-col items-center justify-center mx-auto -mt-20 md:flex-row">
       {blocks.map((block, index) => (
-        <Block title={block.title} key={index} index={index} desc={block.desc} color={index == 1 ? "white" : "yellowColor"} />
+        <Block title={block.title} key={index} index={index} desc={block.desc} color={index === 1 ? "white" : "yellowColor"} />
       ))}
     </div>
   );

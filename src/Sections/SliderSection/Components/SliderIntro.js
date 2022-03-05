@@ -10,7 +10,7 @@ import image3 from "../../../Assets/3.jpg";
 import image4 from "../../../Assets/4.jpg";
 import image5 from "../../../Assets/5.jpg";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const SliderIntro = () => {
   const content = [
@@ -40,30 +40,30 @@ const SliderIntro = () => {
   };
   return (
     <>
-      <AnimatePresence exitBeforeEnter={true}>
-        <div className="h-[35rem] md:h-[70vh]">
-          <Slider autoplay={3000} infinite={true}>
-            {content.map((item, index) => (
-              // <div key={index} className="flex items-center justify-center bg-center bg-cover" style={{ backgroundImage: `url('${item.image}')` }}>
-              <div key={index} className="flex flex-col items-center justify-center bg-center bg-cover" style={{ background: `linear-gradient(rgb(0 0 0 / 63%), rgb(0 0 0 / 87%)), url('${item.image}')` }}>
-                <div className="flex flex-col items-center justify-center text-center center">
-                  <motion.h1 whileInView="animate" viewport={{ once: true }} variants={animations.heading} initial="initial" animate="animate" exit="exit" className="relative text-5xl font-medium md:text-7xl text-gray-50">
-                    {item.title}
-                  </motion.h1>
-                  <motion.p whileInView="animate" viewport={{ once: true }} variants={animations.overview} initial="initial" animate="animate" exit="exit" className="relative w-4/6 mt-5 text-xl font-normal text-yellow-400 md:w-auto">
-                    {item.description}
-                  </motion.p>
-                  <motion.div whileInView="animate" viewport={{ once: true }} variants={animations.btn} initial="initial" animate="animate" exit="exit" className="relative my-8">
-                    <Link to="/contact" className="w-32 p-2 my-10 text-center text-white duration-200 border-2 md:p-3 hover:text-gray-800 hover:bg-yellowColor border-yellowColor">
-                      Contact Us
-                    </Link>
-                  </motion.div>
-                </div>
+      {/* <AnimatePresence exitBeforeEnter={true}> */}
+      <div className="h-[35rem] md:h-[70vh]">
+        <Slider autoplay={3000} infinite={true}>
+          {content.map((item, index) => (
+            // <div key={index} className="flex items-center justify-center bg-center bg-cover" style={{ backgroundImage: `url('${item.image}')` }}>
+            <div key={index} className="flex flex-col items-center justify-center bg-center bg-cover" style={{ background: `linear-gradient(rgb(0 0 0 / 63%), rgb(0 0 0 / 87%)), url('${item.image}')` }}>
+              <div className="flex flex-col items-center justify-center text-center center">
+                <motion.h1 whileInView="animate" viewport={{ once: true }} variants={animations.heading} initial="initial" animate="animate" exit="exit" className="relative text-5xl font-medium md:text-7xl text-gray-50">
+                  {item.title}
+                </motion.h1>
+                <motion.p whileInView="animate" viewport={{ once: true }} variants={animations.overview} initial="initial" animate="animate" exit="exit" className="relative w-4/6 mt-5 text-xl font-normal text-yellow-400 md:w-auto">
+                  {item.description}
+                </motion.p>
+                <motion.div whileInView="animate" viewport={{ once: true }} variants={animations.btn} initial="initial" animate="animate" exit="exit" className="relative my-8">
+                  <Link to="/contact" className="w-32 p-2 my-10 text-center text-white duration-200 border-2 md:p-3 hover:text-gray-800 hover:bg-yellowColor border-yellowColor">
+                    Contact Us
+                  </Link>
+                </motion.div>
               </div>
-            ))}
-          </Slider>
-        </div>
-      </AnimatePresence>
+            </div>
+          ))}
+        </Slider>
+      </div>
+      {/* </AnimatePresence> */}
     </>
   );
 };

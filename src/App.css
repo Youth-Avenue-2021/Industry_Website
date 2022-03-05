@@ -73,9 +73,11 @@ p {
   overflow: hidden;
 }
 
+.navbar-link,
 .footer-link {
   position: relative;
 }
+.navbar-link::after,
 .footer-link:after {
   content: "";
   position: absolute;
@@ -89,12 +91,14 @@ p {
   -webkit-transition: width 0.4s ease;
 }
 
+.navbar-link:hover:after,
 .footer-link:hover:after {
   width: 100%;
   left: 0;
   background: #fff;
 }
 
+.navbar-link,
 .footer-link::after {
   @apply !bg-yellowColor;
 }

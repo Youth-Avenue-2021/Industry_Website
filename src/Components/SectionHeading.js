@@ -15,7 +15,7 @@ const SectionHeading = ({ heading }) => {
   };
   return (
     <>
-      <div className="mt-24 mb-5 text-center">
+      <div className="mt-20 mb-5 text-center">
         <motion.h2 whileInView="animate" viewport={{ once: true }} variants={animations.heading} initial="initial" animate="animate" exit="exit" className="w-full text-4xl leading-[3.2rem] text-center md:leading-none">
           {heading}
         </motion.h2>
