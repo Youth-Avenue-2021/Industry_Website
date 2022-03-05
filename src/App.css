@@ -23,7 +23,7 @@ html {
 }
 
 .inputStyles {
-  @apply w-full p-3 my-2 duration-200 border-2 outline-none bg-gray-50 border-gray-50 focus:border-gray-900/70;
+  @apply w-full px-3 py-2 my-2 text-lg duration-200 border-2 outline-none md:text-xl md:p-3 bg-gray-50 border-gray-50 focus:border-gray-900/70;
 }
 
 h1,
@@ -38,6 +38,7 @@ h6 {
 }
 
 svg {
+  @apply w-3 md:w-auto;
   filter: invert(1) !important;
 }
 
@@ -98,7 +99,7 @@ p {
   background: #fff;
 }
 
-.navbar-link,
+/* .navbar-link, */
 .footer-link::after {
   @apply !bg-yellowColor;
 }

@@ -10,7 +10,7 @@ const ContactSection = () => {
   });
   return (
     <>
-      <div className="flex flex-col md:flex-col items-center justify-center mx-auto bg-white">
+      <div className="flex flex-col items-center justify-center mx-auto bg-white md:flex-col">
         <Contact />
         <GoogleMap />
       </div>

@@ -12,7 +12,7 @@ const ImageBox = () => {
           <div className="w-4/5 px-2 py-5 text-left md:w-2/5 md:py-0 md:px-10 group">
             <h2 className="mt-2 text-2xl text-left md:mt-auto">What We Are Providing</h2>
             <span className="inline-block w-20 h-1 my-2 duration-700 rounded md:my-5 group-hover:w-52 bg-yellowColor"></span>
-            <p className="my-0.5 text-left  md:my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita perferendis corrupti dolores voluptatum veritatis natus at quos earum beatae obcaecati, neque possimus soluta! Laborum nostrum officiis consequuntur? Non, possimus tempore.</p>
+            <p className="my-0.5 text-left text-lg md:my-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita perferendis corrupti dolores voluptatum veritatis natus at quos earum beatae obcaecati, neque possimus soluta! Laborum nostrum officiis consequuntur? Non, possimus tempore.</p>
           </div>
         </div>
       </div>

@@ -1,16 +1,16 @@
 import InputComponent from "../InputComponents/InputComponent";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const animations = {
     input: {
-      initial: { opacity: 0, y: -20 },
-      exit: { opacity: 0, y: -10, transition: { duration: 0.3 } },
+      initial: { opacity: 0, y: -30 },
+      exit: { opacity: 0, y: -10, transition: { duration: 0.3, delay: 0.2 } },
       animate: { opacity: 1, y: 0, transition: { duration: 0.4, delay: 1.1 } },
     },
     submitBtn: {
-      initial: { opacity: 0, y: -20 },
-      exit: { opacity: 0, y: -10, transition: { duration: 0.3 } },
+      initial: { opacity: 0, y: -30 },
+      exit: { opacity: 0, y: -10, transition: { duration: 0.3, delay: 0.4 } },
       animate: { opacity: 1, y: 0, transition: { duration: 0.4, delay: 1.3 } },
     },
   };
@@ -38,7 +38,7 @@ const ContactForm = () => {
         <InputComponent key={index} index={index} class_name="inputStyles" type={item.type} placeholder={item.placeholder} />
       ))}
       <motion.textarea variants={animations.input} initial="initial" animate="animate" exit={"exit"} className="w-full h-[8rem] inputStyles" placeholder="Write a message"></motion.textarea>
-      <input variants={animations.input} initial="initial" animate="animate" exit={"exit"} type="submit" value="Send Message" className="w-full p-3 my-2 text-white duration-200 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2 bg-gray-900" />
+      <motion.input variants={animations.submitBtn} initial="initial" animate="animate" exit={"exit"} type="submit" value="Send Message" className="w-full p-2 my-2 text-white duration-200 bg-gray-900 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2" />
     </form>
     // </AnimatePresence>
   );

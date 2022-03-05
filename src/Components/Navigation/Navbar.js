@@ -1,19 +1,49 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import NavbarLinks from "./NavbarLinks";
 
 const Navbar = () => {
+  const [active, setActive] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setActive(false);
+  }, [location.pathname]);
+
+  const animation = {
+    initial: { opacity: 0, y: 0 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+    exit: { opacity: 0, y: 0, transition: { duration: 0.4 } },
+  };
   return (
-    <div className="bg-yellowColor py-4 flex justify-around items-center">
-      <div className="flex flex-row justify-center items-center">
-        <Link to="/" className="font-headingFont text-2xl">
-          ShreeBai Industries
-        </Link>
+    <>
+      <div className="z-40 flex flex-col items-center justify-around py-4 bg-yellowColor md:flex-row">
+        <div className="flex flex-row items-center justify-around w-full md:w-auto md:justify-center">
+          <Link to="/" className="text-2xl font-headingFont">
+            ShreeBai Industries
+          </Link>
+          <div
+            onClick={() => {
+              active ? setActive(false) : setActive(true);
+            }}
+            className="flex items-center justify-center cursor-pointer md:hidden"
+          >
+            <i className="fa-solid fa-bars-staggered"></i>
+          </div>
+        </div>
+        <div className="flex-row items-center justify-center hidden md:flex">
+          <NavbarLinks />
+        </div>
       </div>
-      <div className="flex flex-row justify-center items-center">
-        <NavbarLinks />
-      </div>
-    </div>
+      <AnimatePresence exitBeforeEnter>
+        {active && (
+          <motion.div variants={animation} initial="initial" animate="animate" exit="exit" className="absolute z-20 flex flex-col items-center justify-center w-full pb-8 bg-yellowColor md:pb-0 md:flex-row">
+            <NavbarLinks />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 

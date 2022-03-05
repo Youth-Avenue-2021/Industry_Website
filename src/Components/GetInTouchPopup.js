@@ -35,9 +35,9 @@ const GetInTouchPopup = () => {
     <AnimatePresence exitBeforeEnter={false}>
       {showPopUp && (
         <motion.div viewport={{ once: true }} variants={animations.mainDiv} animate="show" initial="hidden" exit="hidden" transition="transition" className="fixed top-0 z-40 flex flex-row items-center justify-center w-full h-screen bg-black/80">
-          <motion.div viewport={{ once: true }} variants={animations.formDiv} ref={ref} animate="show" initial="hidden" exit="hidden" transition="transition" className="fixed flex bg-yellowColor flex-col !top-auto justify-center items-center w-4/5 md:w-1/3 px-14 py-8 z-50">
-            <h2 className="text-5xl my-3">Get In Touch</h2>
-            <span className="inline-block w-20 h-1 my-3 group-hover:w-36 duration-200 rounded bg-whiteSmoke"></span>
+          <motion.div viewport={{ once: true }} variants={animations.formDiv} ref={ref} animate="show" initial="hidden" exit="hidden" transition="transition" className="fixed flex bg-yellowColor flex-col !top-auto justify-center items-center w-[85%] md:w-1/3 px-5 md:px-14 py-8 z-50">
+            <h2 className="my-2 text-4xl text-center md:text-5xl">Get In Touch</h2>
+            <span className="inline-block w-20 h-1 my-3 duration-200 rounded group-hover:w-36 bg-whiteSmoke"></span>
             <ContactForm />
           </motion.div>
         </motion.div>

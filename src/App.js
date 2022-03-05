@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import ContactSection from "./Sections/ContactSection";
 import IntroSection from "./Sections/SliderSection/IntroSection";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import ImgGallery from "./Sections/ImageGallery/ImgGallery";
 import Navbar from "./Components/Navigation/Navbar";
 

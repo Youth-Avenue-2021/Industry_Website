@@ -42,7 +42,7 @@ const SliderIntro = () => {
     <>
       {/* <AnimatePresence exitBeforeEnter={true}> */}
       <div className="h-[35rem] md:h-[70vh]">
-        <Slider autoplay={3000} infinite={true}>
+        <Slider autoplay={3000} infinite={true} touchDisabled={true}>
           {content.map((item, index) => (
             // <div key={index} className="flex items-center justify-center bg-center bg-cover" style={{ backgroundImage: `url('${item.image}')` }}>
             <div key={index} className="flex flex-col items-center justify-center bg-center bg-cover" style={{ background: `linear-gradient(rgb(0 0 0 / 63%), rgb(0 0 0 / 87%)), url('${item.image}')` }}>
