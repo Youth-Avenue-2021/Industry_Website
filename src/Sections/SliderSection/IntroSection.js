@@ -6,17 +6,20 @@ import SubscribeSection from "../SubscribeSection/SubscribeSection";
 import WhatWeDoing from "../WhatWeDoingSection/WhatWeDoing";
 import MultipleBlocks from "./Components/MultipleBlocks";
 import SliderIntro from "./Components/SliderIntro";
+import { AnimatePresence } from "framer-motion";
 
 const IntroSection = () => {
   return (
     <>
-      <GetInTouchPopup />
-      <SliderIntro />
-      <MultipleBlocks />
-      <WhatWeDoing />
-      <AboutCompany />
-      <SubscribeSection />
-      <Footer />
+      <AnimatePresence exitBeforeEnter={true}>
+        <GetInTouchPopup />
+        <SliderIntro />
+        <MultipleBlocks />
+        <WhatWeDoing />
+        <AboutCompany />
+        <SubscribeSection />
+        <Footer />
+      </AnimatePresence>
     </>
   );
 };
