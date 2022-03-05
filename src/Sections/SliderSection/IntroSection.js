@@ -11,12 +11,12 @@ const IntroSection = () => {
   const [showPopUp, setShowPopUp] = useState(false);
   useEffect(() => {
     setTimeout(() => {
-      // setShowPopUp(true);
+      setShowPopUp(true);
     }, 2000);
   }, []);
   return (
     <>
-      {showPopUp ? <GetInTouchPopup /> : <></>}
+      {showPopUp ? <GetInTouchPopup activeState={showPopUp} activeStateFn={(value) => setShowPopUp(value)} /> : <></>}
       <SliderIntro />
       <MultipleBlocks />
       <WhatWeDoing />
