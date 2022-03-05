@@ -7,7 +7,7 @@ const SubscribeSection = () => {
       <div className="container mx-auto">
         <form onSubmit={(event) => event.preventDefault()} className="flex flex-col items-center justify-center w-full mx-auto my-8 md:flex-row">
           <input onSubmit={() => console.log("done")} type="email" className="w-4/5 px-5 py-3 text-center duration-200 outline-none md:py-4 md:text-left md:w-2/5" placeholder="abc@xyz.com" required />
-          <button type="submit" className="w-4/5 px-4 py-3 duration-100 bg-gray-900 md:text-left md:w-auto md:px-5 md:py-4 text-yellowColor">
+          <button type="submit" className="w-4/5 px-4 py-3 duration-200 bg-gray-900 md:text-left md:w-auto md:px-5 md:py-4 text-yellowColor">
             Subscribe
           </button>
         </form>
