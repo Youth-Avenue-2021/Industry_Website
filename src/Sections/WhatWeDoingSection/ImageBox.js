@@ -4,7 +4,7 @@ import workers from "../../Assets/workers1.jpg";
 const ImageBox = () => {
   return (
     <>
-      <div className="w-5/6 md:w-[70%] container mx-auto mt-24 bg-white img-BoxShadow -mb-60 z-40">
+      <div className="w-5/6 md:w-[70%] container mx-auto mt-24 bg-white img-BoxShadow -mb-60 z-30">
         <div className="flex flex-col items-center justify-center md:flex-row group">
           <div className="w-full overflow-hidden md:w-3/5">
             <img src={workers} alt="ShreeBai Industries" className="w-full h-full duration-700 group-hover:scale-110 grayscale-0 md:grayscale md:group-hover:grayscale-0" />

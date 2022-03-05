@@ -1,25 +1,47 @@
-import React, { useEffect, useState } from "react";
 import ContactForm from "./FormComponent/ContactForm";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import useOnclickOutside from "react-cool-onclickoutside";
 
-const GetInTouchPopup = ({ activeState, activeStateFn }) => {
+const GetInTouchPopup = () => {
+  const [showPopUp, setShowPopUp] = useState(false);
+
   useEffect(() => {
-    activeState ? (document.querySelector("body").style.overflowY = "hidden") : (document.querySelector("body").style.overflowY = "auto");
-  }, [activeState]);
-  const activeFalse = () => {
-    activeStateFn(false);
-    console.log("active false");
+    showPopUp ? (document.querySelector("body").style.overflowY = "hidden") : (document.querySelector("body").style.overflowY = "auto");
+  }, [showPopUp]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      //   setShowPopUp(true);
+    }, 15000);
+  }, []);
+
+  const ref = useOnclickOutside(() => setShowPopUp(false));
+
+  const animations = {
+    mainDiv: {
+      hidden: { opacity: 0 },
+      show: { opacity: 1 },
+      transition: { duration: 0.3, delay: 0 },
+    },
+    formDiv: {
+      hidden: { top: 0, opacity: 0 },
+      show: { opacity: 1, top: 0 },
+      transition: { duration: 0.2 },
+    },
   };
+
   return (
-    <AnimatePresence initial={false} exitBeforeEnter={true}>
-      {/* <motion.div layout animate={{ opacity: 1, top: 20 }} initial={{ top: 0 }} exit={{ top: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="fixed flex flex-row justify-center items-center w-full h-screen mx-auto z-50"> */}
-      <motion.div layout animate={{ opacity: 1, top: 20 }} initial={{ top: 0 }} exit={{ top: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="fixed top-0 mx-auto container mx-auto flex justify-center group items-center flex-col z-50 w-1/3 py-5 px-16 shadow-2xl bg-yellowColor">
-        <h2 className="text-5xl my-3">Get In Touch</h2>
-        <span className="inline-block w-20 h-1 my-5 group-hover:w-36 duration-200 rounded bg-whiteSmoke"></span>
-        <ContactForm />
-      </motion.div>
-      {/* </motion.div> */}
-      <motion.div animate={{ opacity: 0.8 }} exit={{ opacity: 0 }} onClick={() => activeFalse} transition={{ duration: 0.4, delay: 0 }} className="fixed top-0 z-40 justify-center w-full h-screen bg-black opacity-0"></motion.div>
+    <AnimatePresence exitBeforeEnter={false}>
+      {showPopUp && (
+        <motion.div variants={animations.mainDiv} layout animate="show" initial="hidden" exit="hidden" transition="transition" className="fixed top-0 z-40 flex flex-row items-center justify-center w-full h-screen bg-black/80">
+          <motion.div variants={animations.formDiv} ref={ref} layout animate="show" initial="hidden" exit="hidden" transition="transition" className="fixed flex bg-yellowColor flex-col !top-auto justify-center items-center w-4/5 md:w-1/3 px-14 py-8 z-50">
+            <h2 className="text-5xl my-3">Get In Touch</h2>
+            <span className="inline-block w-20 h-1 my-3 group-hover:w-36 duration-200 rounded bg-whiteSmoke"></span>
+            <ContactForm />
+          </motion.div>
+        </motion.div>
+      )}
     </AnimatePresence>
   );
 };

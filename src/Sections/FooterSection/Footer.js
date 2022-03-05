@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import FooterCompany from "./Components/FooterCompany";
 import FooterCompanyDetails from "./Components/FooterCompanyDetails";
 import FooterLinks from "./Components/FooterLinks";
