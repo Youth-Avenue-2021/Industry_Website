@@ -15,8 +15,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .inputStyles {
-  @apply w-full p-3 my-2 duration-200 border-2 outline-none bg-gray-50 border-gray-50 focus:border-yellow-700/70;
+  @apply w-full p-3 my-2 duration-200 border-2 outline-none bg-gray-50 border-gray-50 focus:border-gray-900/70;
 }
 
 h1,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import GetInTouchPopup from "../../Components/GetInTouchPopup";
 import AboutCompany from "../AboutCompany/AboutCompany";
 import Footer from "../FooterSection/Footer";
@@ -9,6 +9,9 @@ import SliderIntro from "./Components/SliderIntro";
 import { AnimatePresence } from "framer-motion";
 
 const IntroSection = () => {
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   return (
     <>
       <AnimatePresence exitBeforeEnter={true}>
