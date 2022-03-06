@@ -8,7 +8,7 @@ import SectionHeading from "../../Components/SectionHeading";
 const ImgGallery = () => {
   useEffect(() => {
     window.scroll(0, 0);
-  });
+  }, []);
   return (
     <>
       <div className="mx-auto pb-20 min-h-[20rem] container">

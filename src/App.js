@@ -7,7 +7,8 @@ import ImgGallery from "./Sections/ImageGallery/ImgGallery";
 import Navbar from "./Components/Navigation/Navbar";
 import Login from "./Components/LoginSystem/Login";
 import LoginContext from "./Context/LoginContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import GetInTouchPopup from "./Components/GetInTouchPopup";
 
 function App() {
   const location = useLocation();
@@ -18,11 +19,21 @@ function App() {
   const [phNumber, setPhNumber] = useState("");
   const [emailId, setEmailId] = useState("");
   const [message, setMessage] = useState("");
+  const [showPopupBox, setShowPopupBox] = useState(false);
 
+  useEffect(() => {
+    // setShowPopupBox(true);
+    setTimeout(() => {
+      if (location.pathname != "/contact") {
+        setShowPopupBox(true);
+      }
+    }, 2000);
+  }, []);
   return (
     <>
-      <LoginContext.Provider value={{ email, setEmail, fullName, setFullName, phNumber, setPhNumber, emailId, setEmailId, message, setMessage }}>
+      <LoginContext.Provider value={{ showPopupBox, setShowPopupBox, email, setEmail, fullName, setFullName, phNumber, setPhNumber, emailId, setEmailId, message, setMessage, setShowPopupBox }}>
         <Navbar />
+        <GetInTouchPopup />
         <AnimatePresence exitBeforeEnter={true}>
           <Routes key={location.key} location={location}>
             <Route path="/" exact element={<IntroSection />} />
