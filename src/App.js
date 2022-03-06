@@ -5,6 +5,7 @@ import IntroSection from "./Sections/SliderSection/IntroSection";
 import { AnimatePresence, motion } from "framer-motion";
 import ImgGallery from "./Sections/ImageGallery/ImgGallery";
 import Navbar from "./Components/Navigation/Navbar";
+import Login from "./Components/LoginSystem/Login";
 
 function App() {
   const location = useLocation();
@@ -18,6 +19,7 @@ function App() {
       <AnimatePresence exitBeforeEnter={true}>
         <Routes key={location.key} location={location}>
           <Route path="/" exact element={<IntroSection />} />
+          <Route path="/login" exact element={<Login />} />
           <Route path="/contact" exact element={<ContactSection />} />
           <Route path="/products" exact element={<ImgGallery />} />
         </Routes>
