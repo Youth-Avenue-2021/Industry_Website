@@ -1,10 +1,10 @@
-const Loading = () => {
+const Loading = ({ color }) => {
   return (
     <div className="lds-ellipsis">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div className={color}></div>
+      <div className={color}></div>
+      <div className={color}></div>
+      <div className={color}></div>
     </div>
   );
 };

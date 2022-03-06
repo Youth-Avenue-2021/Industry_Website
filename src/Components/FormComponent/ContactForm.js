@@ -80,7 +80,7 @@ const ContactForm = () => {
         placeholder="Write a message"
       ></motion.textarea>
       <motion.button onBlur={() => setFormSubmitted(false)} type="submit" variants={animations.submitBtn} initial="initial" animate="animate" exit={"exit"} className="w-full p-2 my-2 text-white duration-200 bg-gray-900 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2">
-        {formSubmitted ? "Response Recorded" : loading ? <Loading /> : "Send Message"}
+        {formSubmitted ? "Response Recorded" : loading ? <Loading color={"bg-yellowColor"} /> : "Send Message"}
       </motion.button>
       {/* <motion.input variants={animations.submitBtn} initial="initial" animate="animate" exit={"exit"} type="submit" value="Send Message" className="w-full p-2 my-2 text-white duration-200 bg-gray-900 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2" /> */}
     </form>
