@@ -1,16 +1,21 @@
 import InputComponent from "../InputComponents/InputComponent";
 import { motion } from "framer-motion";
 import LoginContext from "../../Context/LoginContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import Loading from "../Loading";
 
 const ContactForm = () => {
   const API_KEY = process.env.REACT_APP_API_KEY;
   const DOMAIN = process.env.REACT_APP_DOMAIN;
 
-  const { message, setMessage, fullName, phNumber, emailId } = useContext(LoginContext);
+  const [loading, setLoading] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const { message, setMessage, fullName, setFullName, phNumber, setPhNumber, emailId, setEmailId, setShowPopupBox } = useContext(LoginContext);
 
   const submitForm = (event) => {
     event.preventDefault();
+    setLoading(true);
 
     const userData = { name: fullName, contact: phNumber, email: emailId, message: message };
 
@@ -19,7 +24,15 @@ const ContactForm = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userData),
     })
-      .then(() => console.log("Form Submitted"))
+      .then(() => {
+        setLoading(false);
+        setFormSubmitted(true);
+        setShowPopupBox(false);
+        setFullName("");
+        setPhNumber("");
+        setEmailId("");
+        setMessage("");
+      })
       .catch(() => console.log("Error"));
   };
   const animations = {
@@ -66,7 +79,10 @@ const ContactForm = () => {
         className="w-full h-[8rem] inputStyles"
         placeholder="Write a message"
       ></motion.textarea>
-      <motion.input variants={animations.submitBtn} initial="initial" animate="animate" exit={"exit"} type="submit" value="Send Message" className="w-full p-2 my-2 text-white duration-200 bg-gray-900 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2" />
+      <motion.button onBlur={() => setFormSubmitted(false)} type="submit" variants={animations.submitBtn} initial="initial" animate="animate" exit={"exit"} className="w-full p-2 my-2 text-white duration-200 bg-gray-900 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2">
+        {formSubmitted ? "Response Recorded" : loading ? <Loading color={"bg-yellowColor"} /> : "Send Message"}
+      </motion.button>
+      {/* <motion.input variants={animations.submitBtn} initial="initial" animate="animate" exit={"exit"} type="submit" value="Send Message" className="w-full p-2 my-2 text-white duration-200 bg-gray-900 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2" /> */}
     </form>
     // </AnimatePresence>
   );

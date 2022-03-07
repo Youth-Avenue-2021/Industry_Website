@@ -5,9 +5,9 @@ const DefaultLocation = { lat: 22.224441, lng: 70.798437 };
 const DefaultZoom = 17;
 
 export default function GoogleMap() {
-  const [defaultLocation, setDefaultLocation] = useState(DefaultLocation);
+  const [defaultLocation] = useState(DefaultLocation);
 
-  const [location, setLocation] = useState(defaultLocation);
+  const [setLocation] = useState(defaultLocation);
   const [zoom, setZoom] = useState(DefaultZoom);
 
   function handleChangeLocation(lat, lng) {
@@ -18,10 +18,10 @@ export default function GoogleMap() {
     setZoom(newZoom);
   }
 
-  function handleResetLocation() {
-    setDefaultLocation({ ...DefaultLocation });
-    setZoom(DefaultZoom);
-  }
+  // function handleResetLocation() {
+  //   setDefaultLocation({ ...DefaultLocation });
+  //   setZoom(DefaultZoom);
+  // }
 
   return (
     <>

@@ -7,7 +7,7 @@ import SubscribeSection from "./SubscribeSection/SubscribeSection";
 const ContactSection = () => {
   useEffect(() => {
     window.scroll(0, 0);
-  });
+  }, []);
   return (
     <>
       <div className="flex flex-col items-center justify-center mx-auto bg-white md:flex-col">
