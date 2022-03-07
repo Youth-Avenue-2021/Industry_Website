@@ -8,6 +8,7 @@ import SliderIntro from "./Components/SliderIntro";
 
 const IntroSection = () => {
   useEffect(() => {
+    document.title = "ShreeBai Industries";
     window.scroll(0, 0);
   }, []);
   return (

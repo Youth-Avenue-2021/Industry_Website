@@ -7,13 +7,14 @@ import SectionHeading from "../../Components/SectionHeading";
 
 const ImgGallery = () => {
   useEffect(() => {
+    document.title = "ShreeBai Industries || Products";
     window.scroll(0, 0);
   }, []);
   return (
     <>
       <div className="mx-auto pb-20 min-h-[20rem] container">
         <SectionHeading heading={"Products Gallery"} />
-        <div className="md:w-8/12 mx-auto products">
+        <div className="mx-auto md:w-8/12 products">
           <Gallery photos={photos} direction={"column"} />
         </div>
       </div>

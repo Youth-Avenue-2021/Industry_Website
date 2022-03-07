@@ -6,6 +6,7 @@ import SubscribeSection from "./SubscribeSection/SubscribeSection";
 
 const ContactSection = () => {
   useEffect(() => {
+    document.title = "ShreeBai Industries || Contact";
     window.scroll(0, 0);
   }, []);
   return (
