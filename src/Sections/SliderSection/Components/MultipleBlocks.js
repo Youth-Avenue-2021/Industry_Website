@@ -22,6 +22,7 @@ const MultipleBlocks = () => {
         <Block title={block.title} key={index} index={index} desc={block.desc} color={index === 1 ? "white" : "yellowColor"} />
       ))}
     </div>
+      
   );
 };
 
