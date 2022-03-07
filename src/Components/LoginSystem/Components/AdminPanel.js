@@ -7,7 +7,8 @@ const AdminPanel = () => {
   const API_KEY = process.env.REACT_APP_API_KEY;
   const DOMAIN = process.env.REACT_APP_DOMAIN;
   const [sort, setSort] = useState("");
-  const [limit, setLimit] = useState(0);
+  const [limit, setLimit] = useState(200);
+  const [deleteId, setDeleteId] = useState("");
 
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -44,7 +45,16 @@ const AdminPanel = () => {
       }
     };
     getData();
-  }, [sort, limit]);
+    const deleteRecordFn = async () => {
+      const { data } = await axios.post(`${DOMAIN}/api/user/deleteRecord?ApiKey=${API_KEY}&delete=${deleteId}`);
+      getData();
+      setDeleteId("");
+      setLoading(true);
+    };
+    if (deleteId !== "") {
+      deleteRecordFn();
+    }
+  }, [sort, limit, deleteId]);
 
   return (
     <>
@@ -63,11 +73,12 @@ const AdminPanel = () => {
                 <th className="px-4 py-2">Contact</th>
                 <th className="px-4 py-2">Email</th>
                 <th className="px-4 py-2">Message</th>
+                <th className="px-4 py-2">Delete</th>
               </tr>
             </thead>
             <tbody>
               {user.map((userItem, index) => (
-                <TableRow index={index + 1} key={userItem._id} name={userItem.name} contact={userItem.contact} email={userItem.email} message={userItem.message} />
+                <TableRow index={index + 1} setLoading={setLoading} id={userItem._id} setDeleteId={setDeleteId} key={userItem._id} name={userItem.name} contact={userItem.contact} email={userItem.email} message={userItem.message} />
               ))}
             </tbody>
           </table>
@@ -143,9 +154,6 @@ const SortMenu = ({ sort, loading, limit }) => {
             loading(true);
           }}
         >
-          <option defaultValue={"20"} value="500" className="text-center">
-            500
-          </option>
           <option className="text-center" value="200">
             200
           </option>
@@ -157,6 +165,9 @@ const SortMenu = ({ sort, loading, limit }) => {
           </option>
           <option className="text-center" value="20">
             20
+          </option>
+          <option value="500" className="text-center">
+            500
           </option>
         </select>
       </div>
