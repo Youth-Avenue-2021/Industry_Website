@@ -2,7 +2,7 @@ import { ExportJsonCsv } from "react-export-json-csv";
 
 const ExportToExcel = ({ data, btnName, fileName, dataType }) => {
   const headers =
-    dataType === data
+    dataType === "data"
       ? [
           {
             key: "name",
