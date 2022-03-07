@@ -42,6 +42,10 @@ svg {
   filter: invert(1) !important;
 }
 
+.btn {
+  @apply py-3 px-4 text-lg my-5 text-white duration-200 bg-gray-900 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2;
+}
+
 body {
   @apply bg-whiteSmoke;
   font-family: "bodyText";

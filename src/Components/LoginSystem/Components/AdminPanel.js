@@ -2,19 +2,24 @@ import React, { useEffect, useState } from "react";
 import TableRow from "./TableRow";
 import axios from "axios";
 import Loading from "../../Loading";
+import ExportToExcel from "./ExportToExcel";
+
+const API_KEY = process.env.REACT_APP_API_KEY;
+const DOMAIN = process.env.REACT_APP_DOMAIN;
 
 const AdminPanel = () => {
-  const API_KEY = process.env.REACT_APP_API_KEY;
-  const DOMAIN = process.env.REACT_APP_DOMAIN;
   const [sort, setSort] = useState("");
   const [limit, setLimit] = useState(200);
   const [deleteId, setDeleteId] = useState("");
 
   const [user, setUser] = useState([]);
+  const [subscribedEmail, setSubscribedEmail] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
+      const subscribedEmailData = await axios.get(`${DOMAIN}/api/subscribe/getEmail?ApiKey=${API_KEY}`);
+      setSubscribedEmail(subscribedEmailData.data);
       switch (sort) {
         case "ascending":
           const ascendingData = await axios.get(`${DOMAIN}/api/user/getData?ApiKey=${API_KEY}&sort=${sort}&limit=${limit}`);
@@ -46,7 +51,7 @@ const AdminPanel = () => {
     };
     getData();
     const deleteRecordFn = async () => {
-      const { data } = await axios.post(`${DOMAIN}/api/user/deleteRecord?ApiKey=${API_KEY}&delete=${deleteId}`);
+      await axios.post(`${DOMAIN}/api/user/deleteRecord?ApiKey=${API_KEY}&delete=${deleteId}`);
       getData();
       setDeleteId("");
       setLoading(true);
@@ -56,9 +61,15 @@ const AdminPanel = () => {
     }
   }, [sort, limit, deleteId]);
 
+  const today = new Date();
+
   return (
     <>
       <SortMenu sort={setSort} loading={setLoading} limit={setLimit} />
+      <div className="relative -mt-8 mb-5 text-center w-full">
+        <ExportToExcel dataType="data" fileName={`${today.getDate()}_${today.getMonth() + 1}_${today.getFullYear()}__Exported Data.csv`} data={user} btnName={"Export This Data"} />
+        <ExportToExcel dataType="email" fileName={`${today.getDate()}_${today.getMonth() + 1}_${today.getFullYear()}__Exported SUbscribed Emails.csv`} data={subscribedEmail} btnName={"Export Subscribed Email"} />
+      </div>
       {loading ? (
         <div className="text-center h-28 flex justify-center items-center flex-row">
           <Loading color={"bg-black"} />
