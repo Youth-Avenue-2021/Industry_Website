@@ -24,7 +24,7 @@ const ExportToExcel = ({ data, btnName, fileName, dataType }) => {
       : [{ key: "email", name: "Email" }];
 
   return (
-    <ExportJsonCsv className={"btn mx-2"} fileTitle={fileName} headers={headers} items={data}>
+    <ExportJsonCsv className={"btn"} fileTitle={fileName} headers={headers} items={data}>
       {btnName}
     </ExportJsonCsv>
   );

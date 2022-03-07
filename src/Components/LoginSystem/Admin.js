@@ -44,8 +44,10 @@ const Admin = () => {
   ];
   return userLogin ? (
     <>
-      <SectionHeading heading="Admin Panel" />
-      <AdminPanel />
+      <div className="bg-white">
+        <SectionHeading heading="Admin Panel" />
+        <AdminPanel />
+      </div>
     </>
   ) : (
     <div className="flex flex-col items-center justify-center w-full h-[80vh]">

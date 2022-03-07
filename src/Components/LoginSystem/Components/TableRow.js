@@ -1,15 +1,15 @@
 const TableRow = ({ id, index, name, contact, email, message, setDeleteId, setLoading }) => {
   return (
     <>
-      <tr className="odd:bg-whiteSmoke bg-white/70">
-        <td className="border px-4 py-2">{index}</td>
-        <td className="border px-4 py-2">{name}</td>
-        <td className="border px-4 py-2">{contact}</td>
-        <td className="border px-4 py-2">{email}</td>
-        <td className="border px-4 py-2 max-w-2xl">{message}</td>
-        <td className="text-center border">
+      <tr className="my-1 odd:bg-whiteSmoke bg-white/70">
+        <td className="px-4 py-2 border-x">{index}</td>
+        <td className="px-4 py-2 border-x">{name}</td>
+        <td className="px-4 py-2 border-x">{contact}</td>
+        <td className="px-4 py-2 border-x">{email}</td>
+        <td className="max-w-2xl px-4 py-2 border-x">{message}</td>
+        <td className="text-center border-x">
           <button
-            className="cursor-pointer w-full px-4 py-2"
+            className="w-full px-4 py-2 cursor-pointer"
             onClick={() => {
               setDeleteId(id);
               setLoading(true);

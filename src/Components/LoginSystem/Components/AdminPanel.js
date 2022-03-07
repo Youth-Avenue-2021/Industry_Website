@@ -66,18 +66,18 @@ const AdminPanel = () => {
   return (
     <>
       <SortMenu sort={setSort} loading={setLoading} limit={setLimit} />
-      <div className="relative -mt-8 mb-5 text-center w-full">
+      <div className="relative w-full mb-10 -mt-2 text-center md:mb-5 md:-mt-8">
         <ExportToExcel dataType="data" fileName={`${today.getDate()}_${today.getMonth() + 1}_${today.getFullYear()}__Exported Data.csv`} data={user} btnName={"Export This Data"} />
         <ExportToExcel dataType="email" fileName={`${today.getDate()}_${today.getMonth() + 1}_${today.getFullYear()}__Exported SUbscribed Emails.csv`} data={subscribedEmail} btnName={"Export Subscribed Email"} />
       </div>
       {loading ? (
-        <div className="text-center h-28 flex justify-center items-center flex-row">
+        <div className="flex flex-row items-center justify-center text-center h-28">
           <Loading color={"bg-black"} />
         </div>
       ) : (
         <div className={`container mx-auto justify-center items-center flex-row overflow-x-scroll ${loading ? "hidden" : "flex"}`}>
           <table className="table-auto">
-            <thead className="bg-gray-900/10 text-left">
+            <thead className="text-left bg-gray-900/10">
               <tr>
                 <th className="px-4 py-2">No.</th>
                 <th className="px-4 py-2">Name</th>
@@ -87,7 +87,7 @@ const AdminPanel = () => {
                 <th className="px-4 py-2">Delete</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="my-2">
               {user.map((userItem, index) => (
                 <TableRow index={index + 1} setLoading={setLoading} id={userItem._id} setDeleteId={setDeleteId} key={userItem._id} name={userItem.name} contact={userItem.contact} email={userItem.email} message={userItem.message} />
               ))}
@@ -102,23 +102,9 @@ const AdminPanel = () => {
 const SortMenu = ({ sort, loading, limit }) => {
   return (
     <div className="flex flex-row items-center justify-center -mt-5 mb-7">
-      <div className="mb-3 w-1/3 md:w-56 mr-2">
+      <div className="w-1/3 mb-3 mr-2 md:w-56">
         <select
-          className="cursor-pointer form-select appearance-none
-      block
-      w-full
-      px-3
-      py-1.5
-      text-base
-      font-normal
-      text-gray-700
-      bg-white bg-clip-padding bg-no-repeat
-      border border-solid border-gray-300
-      rounded
-      transition
-      ease-in-out
-      m-0
-      focus:text-gray-700 focus:bg-white focus:border-yellowColor focus:outline-none"
+          className="cursor-pointer form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellowColor focus:outline-none"
           aria-label="Default select example"
           onChange={(event) => {
             sort(event.target.value);
@@ -142,23 +128,9 @@ const SortMenu = ({ sort, loading, limit }) => {
           </option>
         </select>
       </div>
-      <div className="mb-3 w-1/3 md:w-56 ml-2">
+      <div className="w-1/3 mb-3 ml-2 md:w-56">
         <select
-          className="cursor-pointer form-select appearance-none
-      block
-      w-full
-      px-3
-      py-1.5
-      text-base
-      font-normal
-      text-gray-700
-      bg-white bg-clip-padding bg-no-repeat
-      border border-solid border-gray-300
-      rounded
-      transition
-      ease-in-out
-      m-0
-      focus:text-gray-700 focus:bg-white focus:border-yellowColor focus:outline-none"
+          className="cursor-pointer form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-yellowColor focus:outline-none"
           aria-label="Default select example"
           onChange={(event) => {
             limit(event.target.value);

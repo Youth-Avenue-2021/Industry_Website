@@ -43,7 +43,12 @@ svg {
 }
 
 .btn {
-  @apply py-3 px-4 text-lg my-5 text-white duration-200 bg-gray-900 outline-none cursor-pointer focus:ring focus:ring-gray-600 focus:ring-offset-2;
+  @apply px-4 py-3 mx-2 my-2 text-lg text-white duration-200 bg-gray-900 outline-none cursor-pointer md:my-5 focus:ring focus:ring-gray-600 focus:ring-offset-2;
+}
+
+td,
+table {
+  @apply border-0;
 }
 
 body {

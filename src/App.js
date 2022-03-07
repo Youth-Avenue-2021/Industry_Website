@@ -24,7 +24,6 @@ function App() {
   const [password, setPassword] = useState("");
 
   useEffect(() => {
-    // setShowPopupBox(true);
     setTimeout(() => {
       if (location.pathname !== "/contact" && location.pathname !== "/admin") {
         setShowPopupBox(true);

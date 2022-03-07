@@ -15,11 +15,11 @@ const SectionHeading = ({ heading }) => {
   };
   return (
     <>
-      <div className="mt-20 mb-5 text-center">
+      <div className="pt-10 pb-5 text-center md:pt-20 md:pb-5">
         <motion.h2 whileInView="animate" viewport={{ once: true }} variants={animations.heading} initial="initial" animate="animate" exit="exit" className="w-full text-4xl leading-[3.2rem] text-center md:leading-none">
           {heading}
         </motion.h2>
-        <motion.span whileInView="animate" viewport={{ once: true }} variants={animations.line} initial="initial" animate="animate" exit="exit" className="inline-block w-20 h-1 my-5 rounded bg-yellowColor"></motion.span>
+        <motion.span whileInView="animate" viewport={{ once: true }} variants={animations.line} initial="initial" animate="animate" exit="exit" className="inline-block w-20 h-1 my-3 rounded md:my-5 bg-yellowColor"></motion.span>
       </div>
     </>
   );
