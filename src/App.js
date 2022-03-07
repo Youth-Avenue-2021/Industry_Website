@@ -30,7 +30,7 @@ function App() {
         setShowPopupBox(true);
       }
     }, 15000);
-  }, [location.pathname]);
+  }, []);
   return (
     <>
       <LoginContext.Provider value={{ showPopupBox, setShowPopupBox, email, setEmail, fullName, setFullName, phNumber, setPhNumber, emailId, setEmailId, message, setMessage, userName, setUserName, password, setPassword }}>
