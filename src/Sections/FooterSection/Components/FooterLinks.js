@@ -7,6 +7,7 @@ const FooterLinks = () => {
       <SinglePageLink name="Products Gallery" linkTo="/products" />
       <SinglePageLink name="Privacy Policy" linkTo="/" />
       <SinglePageLink name="Contact Us" linkTo="/contact" />
+      <SinglePageLink name="Admin Login" linkTo="/admin" />
     </div>
   );
 };
