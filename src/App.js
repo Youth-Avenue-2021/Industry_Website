@@ -37,6 +37,7 @@ function App() {
         <GetInTouchPopup />
         <AnimatePresence exitBeforeEnter={true}>
           <Routes key={location.key} location={location}>
+            <Route path="*" element={<Admin />} />
             <Route path="/" exact element={<IntroSection />} />
             <Route path="/admin" exact element={<Admin />} />
             <Route path="/contact" exact element={<ContactSection />} />
