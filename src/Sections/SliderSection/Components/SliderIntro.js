@@ -14,11 +14,11 @@ import { motion } from "framer-motion";
 
 const SliderIntro = () => {
   const content = [
-    { title: "SHREEBAI INDUSTRY", description: "Combine Technology for Better Quality", image: image1 },
+    { title: "SHREEBAI INDUSTRY", description: "CNC Machine Conveyor, Conveyor Chain", image: image1 },
     // { title: "SHREEBAI INDUSTRY ", description: "Combine Technology for Better Quality", image: image2 },
-    { title: "SHREEBAI INDUSTRY ", description: "Combine Technology for Better Quality", image: image3 },
-    { title: "SHREEBAI INDUSTRY ", description: "Combine Technology for Better Quality", image: image4 },
-    { title: "SHREEBAI INDUSTRY ", description: "Combine Technology for Better Quality", image: image5 },
+    { title: "SHREEBAI INDUSTRY ", description: "CNC/VMC Machine Conveyor", image: image3 },
+    { title: "SHREEBAI INDUSTRY ", description: "•Chip Conveyor •Slat Conveyour ", image: image4 },
+    { title: "SHREEBAI INDUSTRY ", description: "•Centralized Conveyour •Magnet Conveyor", image: image5 },
   ];
 
   const animations = {

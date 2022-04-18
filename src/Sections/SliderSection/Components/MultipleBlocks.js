@@ -4,16 +4,16 @@ import Block from "./Block";
 const MultipleBlocks = () => {
   const blocks = [
     {
-      title: "Our Aim",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae",
+      title: "About Our Work",
+      desc: "The SHREE BAI INDUSTRIES conveyor is designed to remove chips and debris from coolant used in machine tools applications.",
     },
     {
       title: "About Company",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae",
+      desc: "The SHREE BAI INDUSTRIES Conveyor is available in a variety configuration to be adaptable to a wide Array of machine tools applications",
     },
     {
-      title: "Our Aim",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae",
+      title: "Why Us?",
+      desc: "Ever since the inception of our firm, we have managed to satisfy our clients owing to the quality services and products that we offer. ",
     },
   ];
   return (

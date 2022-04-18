@@ -9,6 +9,7 @@ import LoginContext from "./Context/LoginContext";
 import { useEffect, useState } from "react";
 import GetInTouchPopup from "./Components/GetInTouchPopup";
 import Admin from "./Components/LoginSystem/Admin";
+import Slideshow from "./Sections/MiniSlider/Components/SlideShow";
 
 function App() {
   const location = useLocation();
@@ -44,6 +45,7 @@ function App() {
           </Routes>
         </AnimatePresence>
       </LoginContext.Provider>
+        {/* <Slideshow/> */}
     </>
   );
 }
