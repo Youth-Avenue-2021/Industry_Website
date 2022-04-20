@@ -1,14 +1,14 @@
 import React from 'react'
-import Premjibhai from '../../Assets/Premjibhai.jpeg'
+import Premjibhai2 from '../../Assets/Premjibhai2.jpeg'
 import Content from './Components/Content';
 import ImageBox from './Components/ImageBox';
 const IntroCeo = () => {
   return (
     <div className='mx-auto'>
       <div className="flex-col items-center justify-center hidden md:flex">
-         <ImageBox image={Premjibhai}/>  
+         <ImageBox image={Premjibhai2}/>  
          <Content />         
-          </div>
+      </div>
     </div>
   )
 }
