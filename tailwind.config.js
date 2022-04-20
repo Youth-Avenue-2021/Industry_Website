@@ -13,6 +13,7 @@ module.exports = {
         whiteSmoke: "#f5f5f5",
         darkGreen: "#00241B",
       },
+      
       backgroundImage: {
         factoryImg: "url(/src/Assets/factory.png)",
       },

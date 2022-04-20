@@ -5,7 +5,7 @@ import SubscribeSection from "../SubscribeSection/SubscribeSection";
 import WhatWeDoing from "../WhatWeDoingSection/WhatWeDoing";
 import MultipleBlocks from "./Components/MultipleBlocks";
 import SliderIntro from "./Components/SliderIntro";
-
+import IntroCeo from "../CeoIntro/IntroCeo";
 const IntroSection = () => {
   useEffect(() => {
     document.title = "ShreeBai Industries";
@@ -17,6 +17,7 @@ const IntroSection = () => {
       <MultipleBlocks />
       <WhatWeDoing />
       <AboutCompany />
+      <IntroCeo />
       <SubscribeSection />
       <Footer />
     </>
