@@ -1,3 +1,11 @@
+import CNC from "../../../Assets/productImgs/CNC.png";
+import Slate from "../../../Assets/productImgs/Slat.png";
+import Belt from "../../../Assets/productImgs/Belt.png";
+import Magnet from "../../../Assets/productImgs/Magnet.png";
+import Chain from "../../../Assets/productImgs/Chain.png";
+import Rack from "../../../Assets/productImgs/Rack.png"
+
+
 export const photos = [
   {
     src: "https://3.imimg.com/data3/PF/RX/MY-4603137/conveyor-attachment-chain-500x500.jpg",
@@ -40,28 +48,30 @@ export const photos = [
     height: 3,
   },
   {
-    // src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+    src: CNC,
     width: 4,
     height: 3,
   },
   {
-    // src: "https://source.unsplash.com/XiDA78wAZVw/600x799",
+    src: Slate,
     width: 3,
     height: 4,
   },
   {
-    // src: "https://source.unsplash.com/x8xJpClTvR0/800x599",
+    src: Belt,
     width: 4,
     height: 3,
   },
   {
-    // src: "https://source.unsplash.com/qGQNmBE7mYw/800x599",
+    src: Magnet,
     width: 4,
-    height: 3,
+    height: 9,
   },
   {
-    // src: "https://source.unsplash.com/NuO6iTBkHxE/800x599",
+    src: Rack,
     width: 4,
-    height: 3,
+    height: 5,
   },
+
+
 ];
