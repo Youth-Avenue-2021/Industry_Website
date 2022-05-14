@@ -3,14 +3,14 @@ import Slate from "../../../Assets/productImgs/Slat.png";
 import Belt from "../../../Assets/productImgs/Belt.png";
 import Magnet from "../../../Assets/productImgs/Magnet.png";
 import Chain from "../../../Assets/productImgs/Chain.png";
-import Rack from "../../../Assets/productImgs/Rack.png"
+import Rack from "../../../Assets/productImgs/Rack.png";
 
 
 export const photos = [
   {
     src: "https://3.imimg.com/data3/PF/RX/MY-4603137/conveyor-attachment-chain-500x500.jpg",
-    width: 4,
-    height: 3,
+    width: 1,
+    height: 1,
   },
   {
     src: "https://2.imimg.com/data2/AP/DR/MY-4603137/chain-conveyor-systems-250x250.jpg",
@@ -19,59 +19,59 @@ export const photos = [
   },
   {
     src: "https://2.imimg.com/data2/MX/UP/MY-4603137/conveyor-chains-250x250.jpg",
-    width: 3,
-    height: 4,
+    width: 1,
+    height: 1,
   },
   {
     src: "https://3.imimg.com/data3/GV/WU/MY-4603137/steel-belt-conveyors-250x250.jpg",
-    width: 3,
-    height: 2.5,
+    width: 1,
+    height: 1,
   },
   {
     src: "https://3.imimg.com/data3/XI/NM/MY-4603137/hinged-steel-belt-conveyors-250x250.jpeg",
-    width: 3,
-    height: 4,
+    width: 1,
+    height: 1,
   },
   {
     src: "https://3.imimg.com/data3/CM/JR/MY-4603137/centralized-conveyors-belt-250x250.jpg",
-    width: 4,
-    height: 3,
+    width: 1,
+    height: 1,
   },
   {
     src: "https://3.imimg.com/data3/YY/HL/MY-4603137/dry-steel-belt-conveyor-250x250.jpeg",
-    width: 3,
-    height: 4,
+    width: 1,
+    height: 1,
   },
   {
     src: "https://3.imimg.com/data3/VI/CI/MY-4603137/cnc-turning-machine-conveyors-250x250.jpg",
-    width: 4,
-    height: 3,
+    width: 1,
+    height: 1,
   },
   {
     src: CNC,
-    width: 4,
-    height: 3,
+    width: 1,
+    height: 1,
   },
   {
     src: Slate,
-    width: 3,
-    height: 4,
+    width: 1,
+    height: 1,
   },
   {
     src: Belt,
-    width: 4,
-    height: 3,
+    width: 1,
+    height: 1,
   },
   {
     src: Magnet,
-    width: 4,
-    height: 9,
+    width: 1,
+    height: 1,
   },
   {
     src: Rack,
-    width: 4,
-    height: 5,
+    width: 1,
+    height: 1,
   },
-
+  
 
 ];
