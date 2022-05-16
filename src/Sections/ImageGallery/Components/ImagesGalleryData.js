@@ -2,7 +2,7 @@ import CNC from "../../../Assets/productImgs/CNC.png";
 import Slate from "../../../Assets/productImgs/Slat.png";
 import Belt from "../../../Assets/productImgs/Belt.png";
 import Magnet from "../../../Assets/productImgs/Magnet.png";
-import Chain from "../../../Assets/productImgs/Chain.png";
+// import Chain from "../../../Assets/productImgs/Chain.png";
 import Rack from "../../../Assets/productImgs/Rack.png";
 
 export const photos = [
