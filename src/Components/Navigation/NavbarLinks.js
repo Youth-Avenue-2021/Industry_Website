@@ -5,7 +5,7 @@ const NavbarLinks = () => {
         <>
             <SinglePageNavbarLink name="Home" linkTo="/" />
             <SinglePageNavbarLink name="Products Gallery" linkTo="/products" />
-            <SinglePageNavbarLink name="Privacy Policy" linkTo="conveyor-book-and-report.pdf" />
+            <SinglePageNavbarLink name="Privacy Policy" linkTo="conveyor-book-and-report.pdf"  target="_blank" />
             <SinglePageNavbarLink name="Contact Us" linkTo="/contact" />
         </>
     );

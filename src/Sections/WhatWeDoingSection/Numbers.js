@@ -4,20 +4,20 @@ import NumbersCounter from "./Components/NumbersCounter";
 const Numbers = () => {
   const numberData = [
     {
-      number: "100",
+      number: "10",
       desc: "Our Employee",
     },
     {
-      number: "252",
-      desc: "Paid Projects",
+      number: "6-25",
+      desc: "Engineers and Technicians",
     },
     {
-      number: "97",
-      desc: "Target on this year",
+      number: "6-25",
+      desc: "Skilled Staff",
     },
     {
-      number: "178",
-      desc: "Partnerships",
+      number: "1-5",
+      desc: "Consultants",
     },
   ];
   return (
