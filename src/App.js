@@ -9,6 +9,8 @@ import LoginContext from "./Context/LoginContext";
 import { useEffect, useState } from "react";
 import GetInTouchPopup from "./Components/GetInTouchPopup";
 import Admin from "./Components/LoginSystem/Admin";
+import  Helmet  from "react-helmet";
+
 import Slideshow from "./Sections/MiniSlider/Components/SlideShow";
 
 function App() {
@@ -33,6 +35,25 @@ function App() {
   }, []);
   return (
     <>
+      {/* SEO */}
+      <div className="AppSeo">
+        <Helmet>
+          <title>My seo app</title>
+          
+          <meta name="title" content="shreebai industries" />
+          <meta name="description" content="Shri Bai Industries is one of the quality manufacturer of various types of Conveyor & Conveyor Chains. The company is working in the heart of Rajkot city (Atika) since last five years. The company is run by young and energetic Mr. Premji Devaliya.  The company has mastered the art of accuracy in order to develop the quality products each time" />
+          <meta name="keywords" content="CNC/VMC Machine Conveyor,  Chip Conveyor  and Slat Conveyour, Centralized Conveyour  and Magnet Conveyor" />
+          <meta name="keywords" content="Conveyor Attachment Chain, Hollow Pin Chains and Centralized Conveyors Belt, Transmission Chain" />
+          <meta name="keywords" content="Established in the year 2000 in Rajkot, Gujarat, “Shree Bai industries”, has established itself as a formidable enterprise involved in manufacturing supplying vast range of Conveyor Systems & Conveyor Chains." />
+          <meta name="Keywords" content="We also undertake Conveyor Fabrication Work in compliance with the defined industry standards. Our fabrication services are implemented within the stipulated time and are rendered in tandem with the requirements of the clients."/>
+          <meta name="robots" content="index, follow" />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+          <meta name="author" content="abhi dadhaniya, rupen bhimani" />
+        </Helmet>
+      </div>
+
+
       <LoginContext.Provider value={{ showPopupBox, setShowPopupBox, email, setEmail, fullName, setFullName, phNumber, setPhNumber, emailId, setEmailId, message, setMessage, userName, setUserName, password, setPassword }}>
         <Navbar />
         <GetInTouchPopup />
@@ -45,7 +66,7 @@ function App() {
           </Routes>
         </AnimatePresence>
       </LoginContext.Provider>
-        {/* <Slideshow/> */}
+      {/* <Slideshow/> */}
     </>
   );
 }
