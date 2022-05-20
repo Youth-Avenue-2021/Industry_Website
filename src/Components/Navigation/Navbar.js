@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import NavbarLinks from "./NavbarLinks";
+import Logo from "../../Assets/productImgs/ShreebaiLogo.png"
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -20,6 +21,7 @@ const Navbar = () => {
     <>
       <div className="z-40 flex flex-col items-center justify-around py-4 bg-yellowColor md:flex-row">
         <div className="flex flex-row items-center justify-around w-full md:w-auto md:justify-center">
+          <img className="h-12 w-12 p-1" src={Logo} alt=""></img>
           <Link to="/" className="text-2xl font-headingFont">
             ShreeBai Industries
           </Link>
