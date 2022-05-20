@@ -1,5 +1,4 @@
 import SinglePageNavbarLink from "./SinglePageNavbarLink";
-import pdf from "../../Assets/Pdf/conveyor book and report.pdf"
 
 const NavbarLinks = () => {
   return (

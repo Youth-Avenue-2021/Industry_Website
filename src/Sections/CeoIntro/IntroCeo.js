@@ -1,5 +1,5 @@
 import React from 'react'
-import Premjibhai2 from '../../Assets/Premjibhai2.jpeg'
+import Premjibhai2 from '../../Assets/PremjiBhai.png'
 import Content from './Components/Content';
 import ImageBox from './Components/ImageBox';
 const IntroCeo = () => {
