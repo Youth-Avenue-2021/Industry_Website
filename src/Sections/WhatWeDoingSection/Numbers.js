@@ -8,15 +8,15 @@ const Numbers = () => {
       desc: "Our Employee",
     },
     {
-      number: "6-25",
+      number: "25",
       desc: "Engineers and Technicians",
     },
     {
-      number: "6-25",
+      number: "25",
       desc: "Skilled Staff",
     },
     {
-      number: "1-5",
+      number: "5",
       desc: "Consultants",
     },
   ];

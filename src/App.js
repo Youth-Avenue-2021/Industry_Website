@@ -3,13 +3,16 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import ContactSection from "./Sections/ContactSection";
 import IntroSection from "./Sections/SliderSection/IntroSection";
 import { AnimatePresence } from "framer-motion";
-import ImgGallery from "./Sections/ImageGallery/ImgGallery";
+import ImgGallery from "./Sections/ImageGallery/Components/ImgGallery";
 import Navbar from "./Components/Navigation/Navbar";
 import LoginContext from "./Context/LoginContext";
 import { useEffect, useState } from "react";
 import GetInTouchPopup from "./Components/GetInTouchPopup";
 import Admin from "./Components/LoginSystem/Admin";
 import { Helmet } from "react-helmet";
+import ImagesGalleryData from "../src/Sections/ImageGallery/Components/ImagesGalleryData"
+// import Popup from "../src/Sections/ImageGallery/Components/Popup";
+
 
 // import Slideshow from "./Sections/MiniSlider/Components/SlideShow";
 
@@ -61,8 +64,9 @@ function App() {
                         <Route path="/" exact element={<IntroSection />} />
                         <Route path="/admin" exact element={<Admin />} />
                         <Route path="/contact" exact element={<ContactSection />} />
-                        <Route path="/products" exact element={<ImgGallery />} />
+                        <Route path="/products" exact element={<ImagesGalleryData />} />
                     </Routes>
+                {/* <Popup />     */}
                 </AnimatePresence>
             </LoginContext.Provider>
             {/* <Slideshow/> */}
